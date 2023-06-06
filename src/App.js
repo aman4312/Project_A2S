@@ -6,6 +6,8 @@ import { AuthContextProvider } from './context/AuthContext';
 import Account from './pages/Account';
 import Home from './pages/Home';
 import Signin from './pages/Signin';
+import Files from './pages/Files';
+import Upload from './pages/Upload';
 
 function App() {
   return (
@@ -20,6 +22,22 @@ function App() {
             element={
               <Protected>
                 <Account />
+              </Protected>
+            }
+          />
+          <Route
+            path='/uploadFiles'
+            element={
+              <Protected>
+                <Upload />
+              </Protected>
+            }
+          />
+          <Route
+            path='/myFiles'
+            element={
+              <Protected>
+                <Files />
               </Protected>
             }
           />
